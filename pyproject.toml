@@ -1,0 +1,7 @@
+
+[project]
+version = "1.0.0"
+name = "advent-of-code"
+description = "My repository for Advent of code"
+readme = "README.md"
+dependencies = ["numpy>=2.2.0", "pytest>=8.3.4"]
