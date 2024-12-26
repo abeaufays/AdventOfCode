@@ -1,3 +1,4 @@
+from collections.abc import Sequence
 import numpy as np
 from utils.vec2d import Vec2D
 
@@ -19,3 +20,16 @@ def to_str(map_data: np.ndarray) -> str:
 def get_position_of(map_data: np.ndarray, item) -> Vec2D:
     positions = np.where(map_data == item)
     return (positions[0][0], positions[1][0])
+
+
+def print_with_highlighted(map_data: np.ndarray, highlighted: Sequence[Vec2D]):
+    shape = map_data.shape
+    result = ""
+    for line_idx in range(shape[0]):
+        for col_idx in range(shape[1]):
+            if (line_idx, col_idx) in highlighted:
+                result += "\033[93m" + str(map_data[(line_idx, col_idx)]) + "\033[0m"
+            else:
+                result += map_data[(line_idx, col_idx)]
+        result += "\n"
+    print(result)
