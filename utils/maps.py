@@ -22,6 +22,10 @@ def get_position_of(map_data: np.ndarray, item) -> Vec2D:
     return (positions[0][0], positions[1][0])
 
 
+def is_position_in_map(position: Vec2D, map_data: np.ndarray) -> bool:
+    return 0 <= position[0] < map_data.shape[0] and 0 <= position[1] < map_data.shape[1]
+
+
 def print_with_highlighted(map_data: np.ndarray, highlighted: Sequence[Vec2D]):
     shape = map_data.shape
     result = ""
