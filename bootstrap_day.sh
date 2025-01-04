@@ -9,10 +9,10 @@ touch y"$1"/d"$2"/__init__.py
 
 echo "def answer(filename:str) -> int:
     return 0" > y"$1"/d"$2"/part1.py
-echo "import y"$1".d"$2".part1 as part1
+echo "import y"$1".d"$2".part1 as solution
 
 def test_answer():
-    assert part1.answer(\"y"$1"/d"$2"/test\") == -1 # TO FILL" > y"$1"/d"$2"/test_part1.py
+    assert solution.answer(\"y"$1"/d"$2"/test\") == -1 # TO FILL" > y"$1"/d"$2"/test_part1.py
 
 touch y"$1"/d"$2"/test
 touch y"$1"/d"$2"/data
