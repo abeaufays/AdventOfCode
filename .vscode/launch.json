@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Module",
+            "type": "debugpy",
+            "request": "launch",
+            // "module": "${command:extension.commandvariable.file.relativeDirDots}.${fileBasenameNoExtension}"
+            "module": "get_day_answer",
+            "args": [
+                "${command:extension.commandvariable.file.relativeDirDots}.${fileBasenameNoExtension}",
+                "${relativeFileDirname}"
+            ]
+        }
+    ]
+}
