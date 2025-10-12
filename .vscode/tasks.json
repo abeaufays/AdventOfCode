@@ -13,6 +13,18 @@
             "options": {
                 "cwd": "."
             }
+        },
+        {
+            "label": "To part 2",
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m to_part_2 ${fileDirname}",
+            "problemMatcher": [
+                "$python"
+            ],
+            "options": {
+                "cwd": "."
+            }
+            
         }
     ]
 }
