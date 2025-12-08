@@ -17,3 +17,6 @@ def test_answer():
 
 touch y"$1"/d"$2"/test
 touch y"$1"/d"$2"/data
+
+
+code y"$1"/d"$2"/test y"$1"/d"$2"/data y"$1"/d"$2"/part1.py y"$1"/d"$2"/test_part1.py
